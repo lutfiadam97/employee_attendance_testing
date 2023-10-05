@@ -54,7 +54,6 @@ counter = 0
 id = -1
 imgEmployee = []
 
-
 while True:
     success, img = cap.read()
 
@@ -223,6 +222,12 @@ while True:
                         imgBackground[44 : 44 + 633, 808 : 808 + 414] = imgModeList[
                             modeType
                         ]
+            else:
+                # still create bounding box with status is unknown
+                y1, x2, y2, x1 = faceLoc
+                y1, x2, y2, x1 = y1 * 4, x2 * 4, y2 * 4, x1 * 4
+                boundingbox = 55 + x1, 162 + y1, x2 - x1, y2 - y1
+                imgBackground = cvzone.cornerRect(imgBackground, boundingbox, rt=0)
     else:
         modeType = 0
         counter = 0

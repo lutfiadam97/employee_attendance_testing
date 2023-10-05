@@ -49,6 +49,24 @@ data = {
         "year": 5,
         "last_attendance_time": "2022-12-11 00:54:34",
     },
+    "202207384": {
+        "name": "Jeremy Quek",
+        "position": "Commisioner",
+        "total_attendance": 10,
+        "starting_year": 2020,
+        "standing": "Good",
+        "year": 3,
+        "last_attendance_time": "2022-12-11 00:54:34",
+    },
+    "9999": {
+        "name": "Unknown",
+        "position": "Unknown",
+        "total_attendance": 0,
+        "starting_year": 2012,
+        "standing": "Good",
+        "year": 5,
+        "last_attendance_time": "2022-12-11 00:54:34",
+    },
 }
 
 for key, value in data.items():
